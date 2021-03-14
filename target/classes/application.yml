@@ -1,0 +1,28 @@
+server:
+  port: 8081
+  address: localhost
+
+spring:
+  application:
+    name: discovery-service
+
+# Uncomment the rabbitmq properties if you are fetching config from Spring Cloud Config Server
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: dost1
+#    password: dost1
+
+  security:
+    user:
+      name: test
+      password: test
+
+eureka:
+  client:
+    fetchRegistry: false
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka
+  instance:
+    prefer-ip-address: true
